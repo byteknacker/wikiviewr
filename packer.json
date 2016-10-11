@@ -1,0 +1,25 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-ovf",
+      "headless": "true",
+      "source_path": "/Users/john/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-trusty64/20160926.0.1/virtualbox/box.ovf",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "shutdown_command": "echo 'packer' | sudo -S shutdown -P now"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "salt-masterless",
+      "local_state_tree": "salt/roots"
+    }
+  ],
+
+  "post-processors": [
+    {
+      "type": "vagrant"
+    }
+  ]
+}
