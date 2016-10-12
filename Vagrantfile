@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
     # Start with base vagrant box. This one is only 271 MB in size.
-    config.vm.box = "test_box"
+    config.vm.box = "wikiviewr"
 
     # Create forwarding ports for client-guest machine access via localhost.
     # auto_correct allows the simultaneous spin up of multiple VM locally.

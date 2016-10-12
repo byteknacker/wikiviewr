@@ -90,3 +90,10 @@ ENV/
 
 # HashiCorp Technologies
 .vagrant
+
+# Mac specific files and directories
+.DS_Store
+
+# Packer specific files and directories
+.box
+packer_cache/
